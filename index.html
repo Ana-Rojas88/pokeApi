@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="shortcut icon" href="https://www.pngall.com/wp-content/uploads/4/Pokeball-PNG-Images.png" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+        integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Pokedex</title>
+</head>
+
+<body>
+    <header>
+        <div class="flex">
+            <figure class="imgBall">
+                <img src="https://www.pngall.com/wp-content/uploads/4/Pokeball-PNG-Images.png" alt="logo">
+            </figure>
+            <h1>Pokédex_</h1>
+        </div>
+        <div class="flex">
+            <input type="search" name="search" id="searchInput" placeholder="Busca tu pokemon...">
+            <button id="btnSearch">Buscar</button>
+        </div>
+    </header>
+    <main id="main-container">
+        <section class="pokemonContainer">
+            <div class="title">
+               
+                <h2 class="font-effect-fire" id="pokemonName"></h2>
+            </div>
+            <figure class="imgPokemon">
+                <img id="imgMain" src="https://images.saymedia-content.com/.image/t_share/MTc2MjkyNDg2MzI1NDc4NTkw/pokemon-charizard-nicknames.png" alt="chaizard">
+            </figure>
+        </section>
+        <article class="infoContainer">
+            <div class="infoItem">
+                <div class="item">
+                    <span class="title">ID</span>
+                    <span id="textId"></span>
+                </div>
+                <div class="item">
+                    <span class="title">BASE EXPERIENCE</span>
+                    <span id="textExperience">100</span>
+                </div>
+            </div>
+            <div class="infoItem">
+                <div class="item">
+                    <span class="title">TYPE</span>
+                    <span class="infoTitle" id="textType"></span>
+                </div>
+                <div class="item">
+                    <span class="title">HABILITY</span>
+                    <span class="infoTitle" id="textHabilities"></span>
+                </div>
+            </div>
+            <div class="infoItem">
+                <div class="item">
+                    <span class="title">HEIGHT</span>
+                    <span id="textHeight"></span>
+                </div>
+                <div class="item">
+                    <span class="title">WEIGHT</span>
+                    <span id="textWeight"></span>
+                </div>
+            </div>
+            <div class="infoItem">
+                <div class="item ">
+                    <spa class="title ">STATS</spa>
+                    <span class="infoTitle itemStats" id="textStats"></span>
+                </div>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <h3>OTHERS</h3>
+        <div id="containerFooter">
+
+        </div>
+    </footer>
+    <script src="./main.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sofia&effect=fire');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --ligthGray: #f4f3f3;
+    --red: rgba(255, 0, 0, 0.8);
+    --ligthGrey: #cfc5ccc6;
+}
+
+body {
+    background-color: rgba(17, 17, 17, 0.89);
+    background: linear-gradient(70deg, rgb(36, 36, 49), rgb(90, 48, 55));
+    padding: 25px;
+    min-width: 600px;
+}
+
+header {
+    background-color: var(--red);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    gap: 10px;
+    border-radius: 15px 15px 0 0;
+    height: 100px;
+}
+
+header figure img {
+    width: 50px;
+}
+
+header h1 {
+    text-transform: uppercase;
+    color: white;
+    margin-top: 9px;
+}
+
+#searchInput {
+    width: 200px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid #f4f3f3;
+    color: #f4f3f3;
+    outline: none;
+    padding: 2px;
+    border-radius:5px 0 0 5px;
+    font-size: 1rem;
+}
+.flex button{
+    width: 70px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #f4f3f3;
+}
+.flex button:hover{
+    background-color: rgb(26, 25, 25);
+    color: #f4f3f3;
+}
+
+.flex {
+    display: flex;
+}
+
+#main-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 40px;
+    background-color: var(--ligthGrey);
+}
+
+.pokemonContainer {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 20px;
+}
+
+.title {
+    height: 70px;
+    background-color: white;
+    display: flex;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.title figure img {
+    width: 50px;
+    height: 50px;
+   
+}
+.title h2{
+    font-family: "Sofia", sans-serif;
+  font-size: 30px;
+  margin-top: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+    position: relative;
+    animation: mymove 5s infinite;
+   
+}
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 300px;}
+  }
+.imgPokemon {
+    width: 100%;
+}
+
+.imgPokemon img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.infoContainer {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 25px;
+    border-radius: 15px;
+    width: 40%;
+    gap: 20px;
+}
+
+.infoItem {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+   
+    box-shadow: 10px 10px 5px rgba(248, 57, 57, 0.8);
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+.info-text {
+    font-size: 24px;
+    font-weight: bolder;
+ 
+}
+
+.infoTitle {
+    line-height: 1.5em;
+   
+}
+.itemStats{
+    display: flex;
+   
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background-color: white;
+    border-radius: 0 0 15px 15px;
+}
+
+footer figure img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+footer figure {
+    padding: 15px;
+    background-color: var(--ligthGrey);
+    border-radius: 10px;
+    margin: 10px;
+}
+
+footer figure:hover {
+    cursor: pointer;
+    background-color: var(--red);
+}
+
+footer div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    width: 65%;
+}
+
+
+@media screen and (max-width: 800px) {
+    .encabezado {
+        justify-content: center;
+    }
+
+    #main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pokemonContainer {
+        width: 90%;
+        z-index: 2;
+        
+    }
+
+    .infoContainer {
+        margin-top: 10px;
+        width: 85%;
+        height: 80vh;
+        transform: translateY(-100px);
+        z-index: 1;
+    }
+
+    .imgBall {
+        display: none;
+    }
+    .title{
+        text-align: center;
+        justify-content: center;
+    }
+    .title h2{
+        animation: none;
+        
+    }
+   
+ 
+}
