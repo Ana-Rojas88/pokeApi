@@ -45,7 +45,7 @@ export const renderPokemon = (pokemon) => {
 
 export const renderFooter = (element) => {
     console.log(element);
-    for (let index = 14; index < element.length; index++) {
+    for (let index = 15; index < element.length; index++) {
         containerFooter.innerHTML += `
         <figure>
                  <button name="${element[index]?.info.id}"  class="pokemonFooter"><img name="${element[index]?.info.id}" class="pokemonFooter" src="${element[index]?.info.sprites.other['official-artwork'].front_default}" alt="${element[index]?.name}"></button>
